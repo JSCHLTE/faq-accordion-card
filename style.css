@@ -1,0 +1,153 @@
+:root {
+    --darkDesatBlue: hsl(238, 29%, 16%);
+    --softRed: hsl(14, 88%, 65%);
+    --softViolet: hsl(273, 75%, 66%);
+    --softBlue: hsl(240, 73%, 65%);
+    --greyBlue: hsl(240, 5%, 91%);
+    --darkGreyBlue: hsl(240, 6%, 50%);
+    --darkerGreyBlue: hsl(237, 12%, 33%);
+    --kumbh: 'Kumbh Sans', sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    font-family: var(--kumbh);
+    background: linear-gradient(var(--softViolet), var(--softBlue));
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.faq_wrapper {
+    background: white;
+    width: 90%;
+    max-width: 812px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.faq_1 {
+    width: 100%;
+    height: 7.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.faq_1 > img {
+    position: absolute;
+    top: 0;
+    transform: translateY(-60%);
+    width: 50%;
+    max-width: 350px;
+    min-width: 250px;
+}
+
+.faq_1 > img:last-child {
+    transform: translateY(0%);
+}
+
+.faq_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.faq_2_title {
+    color: var(--darkDesatBlue);
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.faq_2_faq {
+    margin: 1.5rem;
+    width: 90%;
+}
+
+.faq_qa {
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--greyBlue);
+}
+
+.faq_q {
+    position: relative;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.25em;
+}
+
+.faq_q > span {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.faq_q:hover {
+    font-weight: bolder;
+}
+
+.faq_a {
+    margin: 0.5rem 0.5rem 2rem;
+    font-size: 1.125em;
+    color: var(--darkGreyBlue);
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+
+@media screen and (min-width: 812px) {
+    .faq_wrapper {
+        flex-direction: row;
+    }
+
+    .faq_2_title {
+        text-align: left;
+    }
+
+    .faq_2_title > h1 {
+        margin: 5rem 2rem 1rem;
+    }
+
+    .faq_1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .faq_1 > img {
+        transform: none;
+        width: 600px;
+        transform: translateX(-10%) translateY(30%);
+    }
+
+    .svg {
+        display: none;
+    }
+}
