@@ -35,6 +35,7 @@ main {
 
 .faq_wrapper {
     background: white;
+    height: 500px;
     width: 90%;
     max-width: 812px;
     border-radius: 25px;
@@ -79,8 +80,12 @@ main {
 }
 
 .faq_2_faq {
-    margin: 1.5rem;
+    margin: 0.5rem;
     width: 90%;
+}
+
+summary {
+    list-style-type:  none;
 }
 
 .faq_qa {
@@ -95,25 +100,40 @@ main {
     font-size: 1.25em;
 }
 
+.faq_q:hover {
+    font-weight: bold;
+}
+
+.faq_q::-webkit-details-marker {
+    display: none;
+}
+
 .faq_q > span {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.faq_q:hover {
-    font-weight: bolder;
-}
-
 .faq_a {
-    margin: 0.5rem 0.5rem 2rem;
-    font-size: 1.125em;
-    color: var(--darkGreyBlue);
-    display: none;
+    margin: 0 0 0 1rem;
 }
 
 .show {
     display: block;
+}
+
+details[open] {
+    padding: .5em;
+    color: var(--darkGreyBlue);
+}
+
+details[open] summary {
+    font-weight: bolder;
+    color: var(--darkDesatBlue);
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
 
 

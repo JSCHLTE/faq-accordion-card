@@ -1,16 +1,16 @@
-const faqQa = Array.from(document.querySelectorAll(".faq_qa"));
+const faq = document.querySelectorAll(".faq_qa");
 
-console.log(faqQa);
-
-faqQa.forEach(faq => {
-	faq.addEventListener("click", e => {
-		faq.children[1].classList.toggle("show");
-		const test = faq.children[0];
-		const arrow = test.querySelector("#arrowImg");
-		if (faq.children[1].classList.contains("show")) {
-			arrow.style.transform = `rotate(180deg)`;
-		} else {
-			arrow.style.transform = `rotate(0deg)`;
-		}
+faq.forEach(targetDetail => {
+	targetDetail.addEventListener("click", () => {
+		const arrow = targetDetail.querySelector("#arrowImg");
+		faq.forEach(detail => {
+			if (detail !== targetDetail) {
+				detail.removeAttribute("open");
+				arrow.classList.remove("rotate");
+			}
+			if (!targetDetail.open) {
+				arrow.classList.add("rotate");
+			}
+		});
 	});
 });
